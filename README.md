@@ -4,11 +4,13 @@ Independent Android client by Emmanuel Flores. Not affiliated with Miruro or Ani
 
 ## Download
 
-Get the signed APK from [GitHub Releases](https://github.com/emmandesu/Miruro/releases). Install Miruro 1.0.15 manually once to connect the app to this repository; older builds used a reserved update address.
+Get the latest signed APK from [GitHub Releases](https://github.com/emmandesu/Miruro/releases). Miruro 1.0.15 and newer connect to this repository; older builds need a one-time manual update.
 
-After that, use **Client Settings → General → App updates**. The app checks once daily when opened, or when you tap Check for updates. It downloads the APK inside the app, verifies its checksum, package, version and installed signing identity, then asks Android to show its installation prompt. Update notices wait while you are watching. A finish-watching option queues a reminder after leaving the watch page.
+After that, use **Client Settings → Support → App updates**. The app checks once daily when opened, or when you tap Check for updates. It downloads the APK inside the app, verifies its checksum, package, version and installed signing identity, then asks Android to show its installation prompt. Update notices show What's new, with fixes and new features. Installed-release notes are also available after a successful check. Update notices wait while you are watching. A finish-watching option queues a reminder after leaving the watch page.
 
 The app contains no GitHub token. It uses the selected DNS provider for checks and downloads. Android may ask you to allow installs from Miruro before the first in-app installation.
+
+The screen stays awake while a trusted Miruro video plays inline or in fullscreen, and normal sleep is allowed when paused, ended or backgrounded. Client Settings dialog headers use the Miruro logo.
 
 ## Publishing later versions
 

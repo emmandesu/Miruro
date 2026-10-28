@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 17,
+  "versionName": "1.0.16",
+  "minSdk": 28,
+  "size": 505581,
+  "sha256": "11516eb18512ef66a325046b32567f808827a0972b21cf9e9a41e20ca873d7d6",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.16/Miruro-1.0.16.apk",
+  "notes": "## New features\n- Clear What's new sections show the fixes, new features and improvements before downloading an update.\n- Review the installed version's release notes from App updates after a successful check.\n\n## Fixes\n- Keep the phone screen awake while a video plays inline as well as in fullscreen.\n- Allow normal screen sleep when playback is paused, finished, stopped or the app is in the background.\n- Expire stale playback signals after the player is removed; short buffering and seeks get a bounded grace period.\n\n## Improvements\n- Replace the brightness-style dialog header icon with the Miruro logo, matching the selected theme.\n- Move App updates to Client Settings \u2192 Support."
+}
