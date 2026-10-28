@@ -12,6 +12,8 @@ The app contains no GitHub token. It uses the selected DNS provider for checks a
 
 The screen stays awake while a trusted Miruro video plays inline or in fullscreen, and normal sleep is allowed when paused, ended or backgrounded. Client Settings dialog headers use the Miruro logo.
 
+**Client Settings → Support → Licenses & credits** lists the bundled AndroidX libraries, Chromium boundary interfaces and Karla font. Full Apache 2.0, BSD 3-Clause and OFL 1.1 texts are included for offline reading, alongside project links and acknowledgements. About Miruro links to the same page.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
