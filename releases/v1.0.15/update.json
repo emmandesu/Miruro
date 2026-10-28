@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 16,
+  "versionName": "1.0.15",
+  "minSdk": 28,
+  "size": 501415,
+  "sha256": "e6e0e9d0c3909fb968e3330441d58718fd6ee44032b227c2e9fad702930e7a6f",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.15/Miruro-1.0.15.apk",
+  "notes": "Miruro 1.0.15 connects in-app updates to emmandesu/Miruro on GitHub.\n\n- Client Settings \u2192 General \u2192 App updates checks this repository's published metadata.\n- Daily and manual checks, download progress, cancellation and retry.\n- SHA-256, package, version and signing-certificate checks before installation.\n- Android confirmation for installation, plus a reminder after leaving the watch page.\n- Update downloads use your selected DNS provider; no GitHub token is embedded in the app.\n\nInstall this version manually once to switch from the earlier reserved update address. Subsequent newer releases can use in-app updates."
+}

@@ -1,9 +1,23 @@
-# Miruro Android releases
+# Miruro
 
 Independent Android client by Emmanuel Flores. Not affiliated with Miruro or AniList.
 
-This repository distributes signed Miruro APKs and the update metadata used by Client Settings → General → App updates.
+## Download
 
-Release publishing is being initialized. Download links will appear under Releases after the signed APK is published.
+Get the signed APK from [GitHub Releases](https://github.com/emmandesu/Miruro/releases). Install Miruro 1.0.15 manually once to connect the app to this repository; older builds used a reserved update address.
 
-Only public release files belong here. Private source archives, keystores, passwords and credentials must stay private.
+After that, use **Client Settings → General → App updates**. The app checks once daily when opened, or when you tap Check for updates. It downloads the APK inside the app, verifies its checksum, package, version and installed signing identity, then asks Android to show its installation prompt. Update notices wait while you are watching. A finish-watching option queues a reminder after leaving the watch page.
+
+The app contains no GitHub token. It uses the selected DNS provider for checks and downloads. Android may ask you to allow installs from Miruro before the first in-app installation.
+
+## Publishing later versions
+
+This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
+
+The publisher verifies the owner signing certificate and checksums, creates the versioned GitHub Release, downloads its public assets to verify them, and only then advances the root `update.json` used by installed apps. It refuses to replace a published version with different files or roll metadata backwards. Publishing uses GitHub's temporary token scoped to this repository; no personal token or signing key is stored here.
+
+Use the original owner key and a higher numeric versionCode for each new release. Signing happens privately before upload. Do not upload private source archives, keystores, key passwords or other credentials.
+
+## Verification limits
+
+The Android APK is build- and signature-verified. Automated checks cover update addresses, package/version/signing identity, checksums, transfer failures and cancellation. Android permission prompts and installation behavior still need physical device verification.

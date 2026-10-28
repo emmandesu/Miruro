@@ -1,0 +1,31 @@
+name: Publish signed Miruro release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'releases/**'
+      - 'scripts/publish_release.py'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miruro-release-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out public release files
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify and publish the signed APK, then activate update metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish_release.py
