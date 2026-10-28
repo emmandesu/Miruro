@@ -20,6 +20,12 @@ Open **Downloads** in Miruro’s main menu to see active progress, the waiting q
 
 Finished history is kept locally, with up to 100 items. Clearing it keeps the saved files. If Android stops the app, prepare new links for interrupted jobs; partial transfers do not resume. Files saved with older app versions remain in their folders but cannot automatically appear in the new history.
 
+## Bell and Android notifications
+
+Miruro and AniList unread counts are mirrored as Android notifications, with episode details added when the site’s Notifications panel renders them. Tapping a site alert opens the bell. App updates appear inside that panel too, with a separate unread dot and a link to release notes and update controls. Compatible app releases can also create an Android alert once per version.
+
+Use **Client Settings → Support → Notification settings** to choose site and app-update alerts, allow Android notification permission, or change Android categories and sound. Site alerts sync as the page receives them and on reopening. This does not provide server push while Android has closed the app; update checks remain daily on opening or manual. No web-session credentials are copied into a background service.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
@@ -31,4 +37,5 @@ Use the original owner key and a higher numeric versionCode for each new release
 ## Verification limits
 
 The Android APK is build- and signature-verified. Automated checks cover update addresses, package/version/signing identity, checksums, transfer failures and cancellation. Queue order, per-item cancellation, interrupted-state recovery and menu integration are also covered by automated checks. Android permission prompts, video-player chooser behavior, background transfers and installation still need physical device verification.
+
 

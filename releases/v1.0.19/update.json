@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 20,
+  "versionName": "1.0.19",
+  "minSdk": 28,
+  "size": 534563,
+  "sha256": "7bf8eeb4bd7d081bb91ecdbf11ed5cb6c5ac94efafe073ba93f9066b1fd2cd58",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.19/Miruro-1.0.19.apk",
+  "notes": "## New features\n- Mirror Miruro and AniList unread notices as Android notifications.\n- Tap a site alert to return to Miruro\u2019s bell panel.\n- App updates now appear inside the Notifications panel, with release-note and update controls.\n- A separate dot on the bell marks an unread app update.\n- Available app releases also get an Android notification once per version.\n- Add Notification settings under Client Settings \u2192 Support, with separate site/update alert switches.\n\n## Improvements\n- Group old unread notices instead of flooding the notification tray.\n- Reading notices updates or clears the Android summary without repeated sounds.\n- Keep the website\u2019s own notification count and Miruro/AniList controls intact.\n- Handle Android notification permission and category settings gracefully.\n- Restrict the notification bridge to the trusted top-level Miruro page.\n\n## Delivery notes\n- Site alerts sync as the website receives them and when the app reopens. Details appear when the site panel renders them.\n- This is not server push while Android has closed the app. Update checks remain daily on opening or manual.\n- Install over your current Miruro app to retain settings and sign-in."
+}
