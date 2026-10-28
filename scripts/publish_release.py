@@ -66,8 +66,12 @@ def verify_signature(apk):
     if not jars:
         raise RuntimeError('Android SDK apksigner is required to verify the owner certificate')
     result = subprocess.run(['java', '-jar', str(jars[-1]), 'verify', '--print-certs', str(apk)], text=True, capture_output=True, check=True)
-    if f'Signer #1 certificate SHA-256 digest: {CERT}' not in result.stdout:
-        raise ValueError('APK has the wrong signing certificate')
+    # Newer SDKs can change signer labels and digest casing. Compare the actual
+    # certificate fingerprint, without relying on a particular display prefix.
+    fingerprints = {m.lower().replace(':', '') for m in re.findall(
+        r'certificate\s+SHA-?256\s+digest(?:\s*\(hex\))?:\s*([0-9a-fA-F:]+)', result.stdout, re.IGNORECASE)}
+    if fingerprints != {CERT}:
+        raise ValueError('Owner certificate mismatch. Public apksigner output: ' + result.stdout)
 
 
 def publish(root):
