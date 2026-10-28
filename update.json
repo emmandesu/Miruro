@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 19,
-  "versionName": "1.0.18",
+  "versionCode": 20,
+  "versionName": "1.0.19",
   "minSdk": 28,
-  "size": 526224,
-  "sha256": "6189981da5f0ba9cae7a8d776c0b301e81ce5f3e56e4794421eb99d4dd363a7d",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.18/Miruro-1.0.18.apk",
-  "notes": "## New features\n- Downloads now has its own entry in Miruro\u2019s main menu.\n- Queue up to 20 episodes and download them one at a time.\n- See progress, percentage and downloaded size for each active episode.\n- Tap \u00d7 to cancel an active or waiting download.\n- Completed episodes stay listed. Tap one to choose a video player with Android\u2019s Open with window.\n- Clear finished history without deleting your saved videos.\n\n## Improvements\n- Downloads matches Miruro\u2019s menu and settings design.\n- Each transfer uses the DNS provider selected when it starts.\n- Saved-file access is retained across app restarts when the selected folder supports it.\n- Interrupted and failed downloads show a useful status. Missing files and video players are handled gracefully.\n- Existing popup, redirect and MP4 validation protections remain enabled.\n\n## Notes\n- If Android stops the app, prepare fresh links for interrupted downloads; partial transfers do not resume.\n- Files saved with older versions remain in their chosen folders, but cannot be automatically added to the new history.\n- Install over your current Miruro app to keep your settings and sign-in."
+  "size": 534563,
+  "sha256": "7bf8eeb4bd7d081bb91ecdbf11ed5cb6c5ac94efafe073ba93f9066b1fd2cd58",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.19/Miruro-1.0.19.apk",
+  "notes": "## New features\n- Mirror Miruro and AniList unread notices as Android notifications.\n- Tap a site alert to return to Miruro\u2019s bell panel.\n- App updates now appear inside the Notifications panel, with release-note and update controls.\n- A separate dot on the bell marks an unread app update.\n- Available app releases also get an Android notification once per version.\n- Add Notification settings under Client Settings \u2192 Support, with separate site/update alert switches.\n\n## Improvements\n- Group old unread notices instead of flooding the notification tray.\n- Reading notices updates or clears the Android summary without repeated sounds.\n- Keep the website\u2019s own notification count and Miruro/AniList controls intact.\n- Handle Android notification permission and category settings gracefully.\n- Restrict the notification bridge to the trusted top-level Miruro page.\n\n## Delivery notes\n- Site alerts sync as the website receives them and when the app reopens. Details appear when the site panel renders them.\n- This is not server push while Android has closed the app. Update checks remain daily on opening or manual.\n- Install over your current Miruro app to retain settings and sign-in."
 }
