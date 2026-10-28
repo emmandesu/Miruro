@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 17,
-  "versionName": "1.0.16",
+  "versionCode": 18,
+  "versionName": "1.0.17",
   "minSdk": 28,
-  "size": 505581,
-  "sha256": "11516eb18512ef66a325046b32567f808827a0972b21cf9e9a41e20ca873d7d6",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.16/Miruro-1.0.16.apk",
-  "notes": "## New features\n- Clear What's new sections show the fixes, new features and improvements before downloading an update.\n- Review the installed version's release notes from App updates after a successful check.\n\n## Fixes\n- Keep the phone screen awake while a video plays inline as well as in fullscreen.\n- Allow normal screen sleep when playback is paused, finished, stopped or the app is in the background.\n- Expire stale playback signals after the player is removed; short buffering and seeks get a bounded grace period.\n\n## Improvements\n- Replace the brightness-style dialog header icon with the Miruro logo, matching the selected theme.\n- Move App updates to Client Settings \u2192 Support."
+  "size": 513936,
+  "sha256": "3a048ca8a45e1c0d48f648533ceccd1864c1987011eac0c8742d5c595c495e0f",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.17/Miruro-1.0.17.apk",
+  "notes": "## New features\n- Add Licenses & credits under Client Settings \u2192 Support.\n- Read full open-source license texts offline, with selectable text and original project links.\n\n## Credits\n- Credit AndroidX WebKit, AndroidX Core, Chromium boundary interfaces and the Karla typeface.\n- Include Apache License 2.0, Chromium BSD 3-Clause notices and SIL Open Font License 1.1 inside the APK.\n- Add acknowledgements for Miruro branding, loading-screen quotation sources, services and the Android platform.\n\n## Improvements\n- Match the licenses page to the existing Miruro-themed Client Settings design.\n- Make Licenses & credits accessible from About Miruro too."
 }
