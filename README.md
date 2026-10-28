@@ -14,6 +14,12 @@ The screen stays awake while a trusted Miruro video plays inline or in fullscree
 
 **Client Settings → Support → Licenses & credits** lists the bundled AndroidX libraries, Chromium boundary interfaces and Karla font. Full Apache 2.0, BSD 3-Clause and OFL 1.1 texts are included for offline reading, alongside project links and acknowledgements. About Miruro links to the same page.
 
+## Episode downloads
+
+Open **Downloads** in Miruro’s main menu to see active progress, the waiting queue and completed videos. Add up to 20 pending episodes; they download one at a time using the DNS provider selected when each starts. Tap **×** to cancel one active or queued item. Tap a completed video for Android’s **Open with** chooser and select a video player.
+
+Finished history is kept locally, with up to 100 items. Clearing it keeps the saved files. If Android stops the app, prepare new links for interrupted jobs; partial transfers do not resume. Files saved with older app versions remain in their folders but cannot automatically appear in the new history.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
@@ -24,4 +30,5 @@ Use the original owner key and a higher numeric versionCode for each new release
 
 ## Verification limits
 
-The Android APK is build- and signature-verified. Automated checks cover update addresses, package/version/signing identity, checksums, transfer failures and cancellation. Android permission prompts and installation behavior still need physical device verification.
+The Android APK is build- and signature-verified. Automated checks cover update addresses, package/version/signing identity, checksums, transfer failures and cancellation. Queue order, per-item cancellation, interrupted-state recovery and menu integration are also covered by automated checks. Android permission prompts, video-player chooser behavior, background transfers and installation still need physical device verification.
+
