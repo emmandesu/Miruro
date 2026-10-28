@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 18,
-  "versionName": "1.0.17",
+  "versionCode": 19,
+  "versionName": "1.0.18",
   "minSdk": 28,
-  "size": 513936,
-  "sha256": "3a048ca8a45e1c0d48f648533ceccd1864c1987011eac0c8742d5c595c495e0f",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.17/Miruro-1.0.17.apk",
-  "notes": "## New features\n- Add Licenses & credits under Client Settings \u2192 Support.\n- Read full open-source license texts offline, with selectable text and original project links.\n\n## Credits\n- Credit AndroidX WebKit, AndroidX Core, Chromium boundary interfaces and the Karla typeface.\n- Include Apache License 2.0, Chromium BSD 3-Clause notices and SIL Open Font License 1.1 inside the APK.\n- Add acknowledgements for Miruro branding, loading-screen quotation sources, services and the Android platform.\n\n## Improvements\n- Match the licenses page to the existing Miruro-themed Client Settings design.\n- Make Licenses & credits accessible from About Miruro too."
+  "size": 526224,
+  "sha256": "6189981da5f0ba9cae7a8d776c0b301e81ce5f3e56e4794421eb99d4dd363a7d",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.18/Miruro-1.0.18.apk",
+  "notes": "## New features\n- Downloads now has its own entry in Miruro\u2019s main menu.\n- Queue up to 20 episodes and download them one at a time.\n- See progress, percentage and downloaded size for each active episode.\n- Tap \u00d7 to cancel an active or waiting download.\n- Completed episodes stay listed. Tap one to choose a video player with Android\u2019s Open with window.\n- Clear finished history without deleting your saved videos.\n\n## Improvements\n- Downloads matches Miruro\u2019s menu and settings design.\n- Each transfer uses the DNS provider selected when it starts.\n- Saved-file access is retained across app restarts when the selected folder supports it.\n- Interrupted and failed downloads show a useful status. Missing files and video players are handled gracefully.\n- Existing popup, redirect and MP4 validation protections remain enabled.\n\n## Notes\n- If Android stops the app, prepare fresh links for interrupted downloads; partial transfers do not resume.\n- Files saved with older versions remain in their chosen folders, but cannot be automatically added to the new history.\n- Install over your current Miruro app to keep your settings and sign-in."
 }
