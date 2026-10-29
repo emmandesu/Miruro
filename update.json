@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 21,
-  "versionName": "1.0.20",
+  "versionCode": 22,
+  "versionName": "1.0.21",
   "minSdk": 28,
-  "size": 538659,
-  "sha256": "2fd9c9d6c23f62691ddd7f1661f08e8ecfb8d401482e1d12ba040d2497d190bf",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.20/Miruro-1.0.20.apk",
-  "notes": "## Fixes\n- Safely detach and destroy a crashed WebView before offering to reopen it; stop player polling and stale callbacks.\n- Keep the current page when changing DNS after navigating inside Miruro.\n- Restore the selected episode after activity recreation, retaining safe episode selectors without saving login tokens.\n- Clear old Android notices on sign-out and reset notification history for the next account.\n- Recognize a newly observed episode or AniList notice even when the unread count stays the same.\n- Clear the app-update unread dot and available-update alert when opening updates from Client Settings or any other entry point.\n\n## Improvements\n- Keep old notices, source-tab changes and manual filter/load-more actions quiet.\n- Preserve notification deduplication across restarts with bounded digest history.\n- Reopening after an initial-load renderer failure still waits for startup; successful startup does not repeat the splash.\n\n## Notes\n- Site notifications still depend on the website receiving/rendering them; this is not server push while Android has closed the app.\n- Install over your current Miruro app to retain settings and sign-in."
+  "size": 542921,
+  "sha256": "38d5eeb9ff4058f8ea8c8fd93b6f7152410347138368742df7efe40ae485c215",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.21/Miruro-1.0.21.apk",
+  "notes": "## New feature\n- Lock or unlock orientation from the fullscreen player, using a new rotation button above the touch lock.\n- Fullscreen starts locked in landscape. Unlock to rotate freely, then lock again to keep the current angle, including portrait or reverse landscape.\n\n## Improvements\n- Matching white line icons and translucent round buttons with accessible 48 dp tap targets.\n- Rotation button fades with the player controls and returns when you tap the player.\n- Touch lock hides the rotation button to prevent accidental changes. Unlock touches first to change rotation.\n- Exiting fullscreen restores the previous app rotation setting; each new fullscreen session starts locked in landscape.\n- Added a short guide under Client Settings \u2192 General \u2192 Player.\n\n## Notes\n- Install over your current Miruro app to keep sign-in and settings.\n- Rotation and fullscreen playback still need testing on a physical phone."
 }
