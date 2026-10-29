@@ -32,6 +32,14 @@ Renderer recovery now disposes of the failed WebView and stops its polling befor
 
 The release passes 860 automated checks and retains the owner signing identity. Native renderer-recovery and signed-in Android notification delivery still need a phone check.
 
+## Fullscreen rotation in 1.0.21
+
+A rotation button above the touch lock lets you lock or unlock fullscreen orientation. Fullscreen starts locked in landscape. Tap to auto rotate, turn the phone, then tap again to hold the current angle. Exiting fullscreen restores the app's previous rotation setting.
+
+The phone-and-lock and rotating-phone icons match the touch lock's white line style, translucent round surface and 48 dp tap target. They fade with the player controls. While touch lock is enabled, only Unlock is available; unlock touches first to change rotation. A short guide is included in Client Settings → General → Player.
+
+The release passes 898 automated checks, including fullscreen lifecycle, saved rotation preferences and touch-lock interaction. The APK is signed with the original owner identity. Physical rotation, cutout placement and provider fullscreen behavior still need a device check.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
