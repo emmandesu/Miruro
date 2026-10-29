@@ -26,6 +26,12 @@ Miruro and AniList unread counts are mirrored as Android notifications, with epi
 
 Use **Client Settings → Support → Notification settings** to choose site and app-update alerts, allow Android notification permission, or change Android categories and sound. Site alerts sync as the page receives them and on reopening. This does not provide server push while Android has closed the app; update checks remain daily on opening or manual. No web-session credentials are copied into a background service.
 
+## Recovery and notification fixes in 1.0.20
+
+Renderer recovery now disposes of the failed WebView and stops its polling before reopening. DNS changes follow the current page, and activity restoration retains safe episode selectors. Signing out clears old account notices. Newly observed notice IDs can alert even when the unread count is unchanged; older/filter-loaded rows remain quiet. Opening app updates from any entry point clears the bell’s unread indicator and available-update alert.
+
+The release passes 860 automated checks and retains the owner signing identity. Native renderer-recovery and signed-in Android notification delivery still need a phone check.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
@@ -37,5 +43,6 @@ Use the original owner key and a higher numeric versionCode for each new release
 ## Verification limits
 
 The Android APK is build- and signature-verified. Automated checks cover update addresses, package/version/signing identity, checksums, transfer failures and cancellation. Queue order, per-item cancellation, interrupted-state recovery and menu integration are also covered by automated checks. Android permission prompts, video-player chooser behavior, background transfers and installation still need physical device verification.
+
 
 
