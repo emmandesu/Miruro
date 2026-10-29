@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 20,
-  "versionName": "1.0.19",
+  "versionCode": 21,
+  "versionName": "1.0.20",
   "minSdk": 28,
-  "size": 534563,
-  "sha256": "7bf8eeb4bd7d081bb91ecdbf11ed5cb6c5ac94efafe073ba93f9066b1fd2cd58",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.19/Miruro-1.0.19.apk",
-  "notes": "## New features\n- Mirror Miruro and AniList unread notices as Android notifications.\n- Tap a site alert to return to Miruro\u2019s bell panel.\n- App updates now appear inside the Notifications panel, with release-note and update controls.\n- A separate dot on the bell marks an unread app update.\n- Available app releases also get an Android notification once per version.\n- Add Notification settings under Client Settings \u2192 Support, with separate site/update alert switches.\n\n## Improvements\n- Group old unread notices instead of flooding the notification tray.\n- Reading notices updates or clears the Android summary without repeated sounds.\n- Keep the website\u2019s own notification count and Miruro/AniList controls intact.\n- Handle Android notification permission and category settings gracefully.\n- Restrict the notification bridge to the trusted top-level Miruro page.\n\n## Delivery notes\n- Site alerts sync as the website receives them and when the app reopens. Details appear when the site panel renders them.\n- This is not server push while Android has closed the app. Update checks remain daily on opening or manual.\n- Install over your current Miruro app to retain settings and sign-in."
+  "size": 538659,
+  "sha256": "2fd9c9d6c23f62691ddd7f1661f08e8ecfb8d401482e1d12ba040d2497d190bf",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.20/Miruro-1.0.20.apk",
+  "notes": "## Fixes\n- Safely detach and destroy a crashed WebView before offering to reopen it; stop player polling and stale callbacks.\n- Keep the current page when changing DNS after navigating inside Miruro.\n- Restore the selected episode after activity recreation, retaining safe episode selectors without saving login tokens.\n- Clear old Android notices on sign-out and reset notification history for the next account.\n- Recognize a newly observed episode or AniList notice even when the unread count stays the same.\n- Clear the app-update unread dot and available-update alert when opening updates from Client Settings or any other entry point.\n\n## Improvements\n- Keep old notices, source-tab changes and manual filter/load-more actions quiet.\n- Preserve notification deduplication across restarts with bounded digest history.\n- Reopening after an initial-load renderer failure still waits for startup; successful startup does not repeat the splash.\n\n## Notes\n- Site notifications still depend on the website receiving/rendering them; this is not server push while Android has closed the app.\n- Install over your current Miruro app to retain settings and sign-in."
 }
