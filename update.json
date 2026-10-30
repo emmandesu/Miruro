@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 27,
-  "versionName": "1.0.26",
+  "versionCode": 28,
+  "versionName": "1.0.27",
   "minSdk": 28,
-  "size": 567642,
-  "sha256": "421b7f25fbf9960a012a150ebbb09816cf1b9329989f00e8985ab9c5e20b0184",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.26/Miruro-1.0.26.apk",
-  "notes": "## PiP fixes\n- Removes the duplicate native audio-focus controller that could repeatedly pause WebView playback.\n- Moves the PiP button into the native player overlay on the left, with the existing control visibility and touch-lock behavior.\n- Avoids stopping a PiP window that remains visibly active during device lifecycle callbacks.\n- Keeps explicit Play/Pause actions and the existing video/iframe.\n\nInstall over the current app. The signed API 36 build and automated checks pass; the reported Xiaomi playback behavior still needs confirmation on the phone."
+  "size": 575901,
+  "sha256": "edef2505522f1055f7c97455ac119b90066d80d0429f6113da7f2a8ca666f865",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.27/Miruro-1.0.27.apk",
+  "notes": "## Detailed diagnostics\n- Adds player Play/Pause, buffering, stalled/no-progress, seek, decode/error and visibility events with position, buffer and player state.\n- Correlates app-issued PiP commands with command-received and video events, including caught Play permission/autoplay failures.\n- Logs PiP entry decisions, permissions, state blockers, lifecycle, service events, renderer stalls, memory pressure and categorized script/resource failures.\n- Adds a live event viewer with pauseable refresh, a state-snapshot/issue marker and structured JSON export with a field guide.\n- Export includes app/WebView/device context and recent Android process-exit codes where available.\n\n## Privacy and limits\n- Recording stays opt-in and local. Full URLs, credentials, response/page text and raw console/exception messages are excluded.\n- Logs rotate within 1 MB. Event-rate suppression is reported; resource timing/status availability depends on WebView.\n- A pause without a recent app command is recorded as an observation, not proof of its cause. Logging cannot capture events that happened before recording was enabled.\n\n## Verification\n- 1,210 automated checks pass. API 36, Android 9+ support and the original signer are retained. Actual Android event delivery and physical-device PiP behavior still need device verification."
 }
