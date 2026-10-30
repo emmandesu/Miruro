@@ -19,7 +19,7 @@
 
 **Miruro is an independent Android app that brings the Miruro website into a dedicated app interface.** It keeps the website’s own player and AniList integration, with native controls for fullscreen, downloads, connection settings and app updates.
 
-**Android 9+** · **Android System WebView required** · **Created by Emmanuel Flores**
+**Android 9+** · **Targets Android 16 / API 36** · **Android System WebView required** · **Created by Emmanuel Flores**
 
 ## Features
 
@@ -96,9 +96,9 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.23 release passes **1,087 automated checks** and retains the original owner signing identity. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge. A short two-chunk live sample was identified as 1080p H.264 video with AAC audio.
+The 1.0.24 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes **1,087 automated regression checks** and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
-The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual device rotation, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
+The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
 </details>
 

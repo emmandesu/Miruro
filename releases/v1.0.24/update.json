@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 25,
+  "versionName": "1.0.24",
+  "minSdk": 28,
+  "size": 555280,
+  "sha256": "098aa6ebfb9c55706d42a3714528a89487e35190c4f02594cc74e94ba50b959d",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.24/Miruro-1.0.24.apk",
+  "notes": "## Android 16 update\n- Miruro now compiles against and targets API 36 (Android 16).\n- Android 9 and newer remain supported; minimum API stays at 28.\n- Keeps immersive fullscreen, touch/orientation locks and the existing modern Back handler.\n- Preserves fullscreen rotation locking on Android 16 large screens through the platform compatibility option.\n\n## Build improvements\n- Updated Android build tooling and aligned the Android Studio and direct SDK build settings.\n- Retains the community login-window fix, download queue and selected-DNS transfers.\n\n## Notes\n- Install over your current app to retain settings, downloads and sign-in.\n- Signed build, SDK metadata and automated regressions are checked. Android 16 gestures, keyboard, fullscreen and tablet/foldable behavior still need physical-device verification. Live community account sign-in remains unverified in this environment."
+}

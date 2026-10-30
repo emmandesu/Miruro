@@ -33,3 +33,11 @@ The comments panel uses The Anime Community, separately from AniList. The client
 Simultaneous pending windows have separate guards and timeouts, so a hidden ad candidate no longer consumes the login or download window. Unrelated external destinations and lookalike origins remain blocked. Authentication opened in the main view does not restart the anime loading screen.
 
 The release passes **1,087 automated checks** and retains the original owner signing identity. The provider was unavailable from the build environment; live account login, registration, commenting and Android session persistence still need device verification. Provider-specific social sign-in was not inspected or verified.
+
+## Android 16 / API 36 in 1.0.24
+
+Miruro now compiles against and targets **API 36**, while retaining **Android 9+** support (minimum API 28). The Android Studio project uses AGP 8.10.1, Gradle 8.11.1 and Build Tools 36.0.0. The direct SDK build reads its SDK levels and version from the same Gradle configuration, and release preparation verifies those settings against the compiled APK.
+
+The existing edge-to-edge layout and modern Back callback remain active. MainActivity explicitly enables the platform Back callback and uses Android 16's temporary large-screen compatibility setting to preserve the fullscreen landscape/orientation-lock feature. The app does not opt out of edge-to-edge, set a fixed aspect ratio or disable normal window resizing. This compatibility setting is specific to the API 36 migration and will need review before targeting later Android versions.
+
+The release retains community login-window support, download queues, selected-DNS transfers and the existing update flow. All **1,087 automated regression checks** pass. The signed APK's compiled/target SDK 36, minimum SDK 28, versionCode 25 and original owner certificate are verified. Release preparation also rejects the previous API 35 APK. Physical Android 16 gestures, keyboard, fullscreen and tablet/foldable rotation still need device verification; live community account sign-in remains unverified here.
