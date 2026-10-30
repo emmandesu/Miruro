@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 28,
+  "versionName": "1.0.27",
+  "minSdk": 28,
+  "size": 575901,
+  "sha256": "edef2505522f1055f7c97455ac119b90066d80d0429f6113da7f2a8ca666f865",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.27/Miruro-1.0.27.apk",
+  "notes": "## Detailed diagnostics\n- Adds player Play/Pause, buffering, stalled/no-progress, seek, decode/error and visibility events with position, buffer and player state.\n- Correlates app-issued PiP commands with command-received and video events, including caught Play permission/autoplay failures.\n- Logs PiP entry decisions, permissions, state blockers, lifecycle, service events, renderer stalls, memory pressure and categorized script/resource failures.\n- Adds a live event viewer with pauseable refresh, a state-snapshot/issue marker and structured JSON export with a field guide.\n- Export includes app/WebView/device context and recent Android process-exit codes where available.\n\n## Privacy and limits\n- Recording stays opt-in and local. Full URLs, credentials, response/page text and raw console/exception messages are excluded.\n- Logs rotate within 1 MB. Event-rate suppression is reported; resource timing/status availability depends on WebView.\n- A pause without a recent app command is recorded as an observation, not proof of its cause. Logging cannot capture events that happened before recording was enabled.\n\n## Verification\n- 1,210 automated checks pass. API 36, Android 9+ support and the original signer are retained. Actual Android event delivery and physical-device PiP behavior still need device verification."
+}

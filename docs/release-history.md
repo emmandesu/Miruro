@@ -55,3 +55,11 @@ The signed API 36 release is versionCode 26 and passes **1,185 automated checks*
 ## PiP repair in 1.0.26
 
 Removes native PiP audio-focus acquisition and its pause-on-loss feedback loop. The native overlay now provides the left-side PiP entry button, following control visibility and touch lock. Visible PiP is protected from redundant stop callbacks. Build and automated checks pass; actual device behavior still needs confirmation.
+
+## Detailed diagnostics in 1.0.27
+
+Player events now include position/duration, buffering, decoder/network state, visibility and no-progress intervals. Explicit PiP Play/Pause commands are logged separately from their reception and resulting media events, including caught autoplay/permission rejections. PiP entry decisions include permission, readiness, playback freshness and blocker flags. Native lifecycle, service, renderer stall, memory pressure and categorized resource/script failures provide context.
+
+Diagnostics adds a live viewer, pauseable refresh, issue marker/state capture, and structured JSON export with device/WebView/power context, recent Android process-exit codes where supported, and a field guide. Recording stays opt-in and local. Details are allowlisted numeric/boolean values; raw messages, full URLs, credentials and page/response text are excluded. Storage rotates within 1 MB and excessive frame events report a suppression count.
+
+The original-signer API 36 build passes **1,210 automated checks**. Actual Android event delivery remains device-dependent. This release collects evidence; it does not claim that every pause cause can be identified automatically or that the reported phone PiP issue has been physically verified.

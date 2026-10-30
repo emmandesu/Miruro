@@ -39,7 +39,7 @@ A few more things that make everyday watching easier:
 - **Connection feedback.** A small banner tells you when the connection is lost or restored.
 - **Notifications in two places.** Mirror the website’s Miruro/AniList notices to Android, and see available app updates inside the site’s notification panel.
 - **A welcome that knows when to leave.** The animated Miruro loading screen is for initial startup, with anime quotes and a first-use menu guide.
-- **Local diagnostics.** Turn logging on when needed, export an issue report, and clear recorded logs. The client adds no analytics or automatic log uploads.
+- **Detailed diagnostics.** Live player/PiP state, buffering and pause-command correlation, lifecycle/renderer errors, resource failures, issue markers and JSON export. Recording is opt-in and local, with no automatic uploads.
 
 > Notification delivery follows the website receiving or rendering its notices. It is not server push while Android has closed the app. Update checks run daily when opened, or manually.
 
@@ -100,7 +100,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.26 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.27 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
@@ -116,3 +116,9 @@ The community service could not be accessed from the build environment, so live 
 </p>
 
 PiP repair in 1.0.26 removes the duplicate audio-focus controller and moves manual entry to the native player overlay. Sustained playback on the reported device still needs confirmation.
+
+## Capturing an issue
+
+Open **Client Settings → Support → Diagnostic logs**, enable recording, then reproduce the problem. Use **Capture state / mark issue** if helpful and choose **Export diagnostic report** to save the JSON file. Live events can be paused for reading.
+
+Version 1.0.27 adds a timed event timeline and player state snapshots, PiP decision flags and commands, categorized script/resource errors, renderer stalls and Android process-exit context where available. Reports exclude credentials, full URLs, page/response text and raw console messages. Recording cannot recover earlier events; a pause with no recent app command does not prove its cause. Logs rotate within 1 MB. **1,210 automated checks pass**; physical-device event delivery still needs verification.
