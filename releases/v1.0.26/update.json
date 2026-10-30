@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 27,
+  "versionName": "1.0.26",
+  "minSdk": 28,
+  "size": 567642,
+  "sha256": "421b7f25fbf9960a012a150ebbb09816cf1b9329989f00e8985ab9c5e20b0184",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.26/Miruro-1.0.26.apk",
+  "notes": "## PiP fixes\n- Removes the duplicate native audio-focus controller that could repeatedly pause WebView playback.\n- Moves the PiP button into the native player overlay on the left, with the existing control visibility and touch-lock behavior.\n- Avoids stopping a PiP window that remains visibly active during device lifecycle callbacks.\n- Keeps explicit Play/Pause actions and the existing video/iframe.\n\nInstall over the current app. The signed API 36 build and automated checks pass; the reported Xiaomi playback behavior still needs confirmation on the phone."
+}

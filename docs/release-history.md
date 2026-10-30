@@ -51,3 +51,7 @@ PiP keeps the current Activity, WebView, video and iframe. Scoped layout markers
 A non-exported media-playback foreground service displays a low-priority return-to-player notification while PiP is active. It allows new audio-focus requests under Android 15+ rules and ends when PiP closes, expands, fails, or its activity is disposed. Audio-focus loss pauses the stream. No second media URL/player is created, and DNS, popup filtering and download behavior stay on the existing paths.
 
 The signed API 36 release is versionCode 26 and passes **1,185 automated checks**, including 60 PiP origin/state checks and 38 existing-player/layout/command checks. Physical Android PiP transitions, OEM permission screens, native/iframe rendering, audio focus and RemoteAction delivery still need device verification. No live Android PiP success is claimed from this build environment.
+
+## PiP repair in 1.0.26
+
+Removes native PiP audio-focus acquisition and its pause-on-loss feedback loop. The native overlay now provides the left-side PiP entry button, following control visibility and touch lock. Visible PiP is protected from redundant stop callbacks. Build and automated checks pass; actual device behavior still needs confirmation.
