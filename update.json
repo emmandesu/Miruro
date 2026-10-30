@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 23,
-  "versionName": "1.0.22",
+  "versionCode": 24,
+  "versionName": "1.0.23",
   "minSdk": 28,
-  "size": 551184,
-  "sha256": "a2c4976f0dfa77878790ec41e6adac0ae0ad9aed795d93aeba4ab4b66ed93bc7",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.22/Miruro-1.0.22.apk",
-  "notes": "## New feature\n- The player Download icon now captures the current supported stream and adds the full episode to Downloads, without opening an external download page.\n- Uses your selected DNS provider for playlists and video chunks, with progress, cancellation and completed-file opening.\n\n## Improvements\n- Captures the actual selected HLS source instead of the temporary playback blob.\n- Verifies video chunks even when the provider gives them image filenames.\n- Blocks unapproved redirects and prevents duplicate downloads from one tap.\n- Keeps fullscreen after adding a stream download; cancelling a fullscreen panel restores the lock buttons.\n\n## Notes\n- Supported HLS video saves as .ts; use a compatible player such as VLC. Supported MP4 sources remain .mp4. Separate captions are not included.\n- Current direct-stream support covers the observed pinewren.top CDN used by the sun player. Unsupported/encrypted layouts show a message; use the episode menu \u2192 Download for the provider MP4 route.\n- Stream links may expire in the queue. Interrupted downloads require a fresh link.\n- Install over the current app to keep settings and sign-in. The Android save flow and live custom-DNS transfer still need a phone check."
+  "size": 555280,
+  "sha256": "a765d9fc8bc2ae924d8f99be4394e52c654438dc7bf6dbbcabaa795d3773a24e",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.23/Miruro-1.0.23.apk",
+  "notes": "## Fixes\n- Allows the comments panel's Log In and Sign Up windows for The Anime Community.\n- Preserves the original login window and its connection to the embedded comments, including blank-window sign-in bootstraps.\n- Separates simultaneous pending windows so a hidden ad attempt does not occupy the real login or download window.\n- Keeps unrelated popup destinations and redirects blocked. Community access is restricted to its exact HTTPS host.\n\n## Notes\n- Community accounts are separate from AniList sign-in. Use the community panel's Log In or Sign Up buttons.\n- Login uses the website's own forms and shared WebView cookies; the app does not copy credentials or log authentication URLs.\n- 1,087 automated checks pass and the APK retains the original signing identity. A real Android account login, registration and commenting still need device verification: the community service could not be accessed from the build environment.\n- Install over the existing app to retain settings, downloads and sign-in."
 }
