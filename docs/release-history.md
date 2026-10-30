@@ -26,3 +26,10 @@ Complete plain HLS with embedded audio saves as **.ts**, for compatible players 
 
 The release passes **990 automated checks**. A short live two-chunk sample processed by the transfer code was identified as 1080p H.264 with AAC audio. Full Android tap/picker/queue behavior and live native custom-DNS transfers still need a phone check; this environment could not complete a native outbound DoH tunnel.
 
+## Community sign-in in 1.0.23
+
+The comments panel uses The Anime Community, separately from AniList. The client now allows that service's exact HTTPS host in both the early popup guard and native document policy, including the embedded widget's blank-window bootstrap. Login and registration retain their original WebView, shared cookie profile and opener connection.
+
+Simultaneous pending windows have separate guards and timeouts, so a hidden ad candidate no longer consumes the login or download window. Unrelated external destinations and lookalike origins remain blocked. Authentication opened in the main view does not restart the anime loading screen.
+
+The release passes **1,087 automated checks** and retains the original owner signing identity. The provider was unavailable from the build environment; live account login, registration, commenting and Android session persistence still need device verification. Provider-specific social sign-in was not inspected or verified.

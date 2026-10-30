@@ -33,6 +33,7 @@
 A few more things that make everyday watching easier:
 
 - **Playback-aware screen timeout.** The screen stays awake while a trusted video plays, including inline playback. Pausing, ending or backgrounding allows normal sleep.
+- **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
 - **Miruro links and backup domains.** Choose supported links in Android settings and manage Miruro addresses from Client Settings.
 - **Connection feedback.** A small banner tells you when the connection is lost or restored.
 - **Notifications in two places.** Mirror the website’s Miruro/AniList notices to Android, and see available app updates inside the site’s notification panel.
@@ -46,7 +47,7 @@ A few more things that make everyday watching easier:
 1. Open the **[latest release](https://github.com/emmandesu/Miruro/releases/latest)** and download its signed `.apk`.
 2. Install it on Android 9 or newer with Android System WebView installed and enabled.
 3. Open Miruro and choose your DNS provider in **Client Settings → Connection**.
-4. Sign in to AniList through the website if you want to use its list and progress tools.
+4. Sign in to AniList through the website if you want to use its list and progress tools. For comments, use **Log In** or **Sign Up** inside the community panel.
 
 **Already using Miruro? Install over the existing app.** Keep it installed to retain your app settings and sign-in. Builds before 1.0.15 need a one-time manual update to connect to this repository’s updater.
 
@@ -95,9 +96,9 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.22 release passes **990 automated checks** and retains the original owner signing identity. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge. A short two-chunk live sample was identified as 1080p H.264 video with AAC audio.
+The 1.0.23 release passes **1,087 automated checks** and retains the original owner signing identity. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge. A short two-chunk live sample was identified as 1080p H.264 video with AAC audio.
 
-Actual device rotation, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
+The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual device rotation, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
 </details>
 
