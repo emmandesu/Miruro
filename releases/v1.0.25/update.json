@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 26,
+  "versionName": "1.0.25",
+  "minSdk": 28,
+  "size": 567642,
+  "sha256": "3eace85adb4ee6a2a6806db7a7dc6caf24a61199e29b5d4ae70fd579b587ec4b",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.25/Miruro-1.0.25.apk",
+  "notes": "## Picture in picture\n- Watch the current streaming video in a small Android window while using other apps.\n- Tap the new Picture in picture button at the player\u2019s top-left, or use Client Settings \u2192 General \u2192 Player \u2192 Picture in picture.\n- Automatic entry when leaving during playback is enabled by default and can be turned off in those settings. Paused videos and pages without active supported playback do not enter automatically.\n- Android\u2019s small window provides Play/Pause, expand and close controls. Expanding returns to the existing player; closing pauses playback.\n\n## Playback handling\n- Keeps the existing video and iframe without loading a second stream.\n- Hides the surrounding site, player controls and client overlays while PiP is active, then restores their layout.\n- Adds a playback notification/service for Android 16 audio-focus handling. It ends when PiP closes, expands, or fails to open.\n- Supports the current strm.cx player and direct Miruro media-player/control-enabled video. Android PiP support and permission are required.\n\n## Notes\n- API 36 target and Android 9+ support are retained. Install over the current app to keep data.\n- 1,185 automated checks pass. The APK builds with the original signing certificate. Actual Android PiP transitions, OEM permission screens, media-control delivery and audio focus still need physical-device verification."
+}

@@ -32,6 +32,7 @@
 
 A few more things that make everyday watching easier:
 
+- **Picture in picture.** Keep the current streaming video in a small Android window, with Play/Pause and a return to the existing player. Automatic entry while leaving during playback can be turned off.
 - **Playback-aware screen timeout.** The screen stays awake while a trusted video plays, including inline playback. Pausing, ending or backgrounding allows normal sleep.
 - **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
 - **Miruro links and backup domains.** Choose supported links in Android settings and manage Miruro addresses from Client Settings.
@@ -60,9 +61,12 @@ For later updates, open **Client Settings → Support → App updates**. You can
 | **Fullscreen** | Opens the video in landscape and hides the status and navigation bars. |
 | **Orientation lock** | In fullscreen, tap the rotating-phone control above touch lock to allow rotation. Rotate the device, then lock again to hold the current angle. Exiting fullscreen restores the prior app rotation setting. |
 | **Touch lock** | Blocks accidental taps and swipes over the player. Tap the video to reveal Unlock; Back also unlocks. Unlock touches before changing orientation. |
+| **Picture in picture** | Tap the player’s top-left PiP button, or leave the app while a supported video is playing. Android supplies Play/Pause, expand and close. |
 | **Player Download icon** | Captures the current supported stream, checks its format, then asks where to save the full episode. |
 
 The lock buttons fade with the player controls. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
+
+**PiP settings:** open **Client Settings → General → Player → Picture in picture** for manual entry, automatic-entry preference and the Android permission shortcut. The current `strm.cx` player and direct Miruro media-player/control-enabled video are supported. Paused or ended videos do not open automatically. Closing the small window pauses playback; expanding returns to the same player. Android displays a playback notification while PiP is active. A supported device, PiP permission and a current WebView are required.
 
 ## Downloads
 
@@ -96,9 +100,9 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.24 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes **1,087 automated regression checks** and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.25 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes **1,185 automated regression checks** and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
-The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
+The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
 </details>
 
