@@ -40,6 +40,16 @@ The phone-and-lock and rotating-phone icons match the touch lock's white line st
 
 The release passes 898 automated checks, including fullscreen lifecycle, saved rotation preferences and touch-lock interaction. The APK is signed with the original owner identity. Physical rotation, cutout placement and provider fullscreen behavior still need a device check.
 
+## Current-stream downloads in 1.0.22
+
+The player's existing Download icon now captures the selected supported stream, checks its layout, and asks where to save the full episode. It joins the same queue with progress, cancellation and completed-file opening. Adding from fullscreen keeps fullscreen when you return from the save picker.
+
+The current integration covers the observed pinewren.top CDN used by the sun player. It reads the actual selected HLS source rather than its temporary MSE blob. Playlists and video chunks use the DNS provider selected when the job starts. Requests stay on approved routes at the same source host; unrelated redirects and external windows are blocked. Every media chunk is checked as binary video, even when named as an image.
+
+Complete plain HLS with embedded audio saves as **.ts**, for compatible players such as VLC. Supported direct/fragmented MP4 stays **.mp4**. Separate player captions are not included; HLS progress and size are estimates. Encrypted, live and unsupported layouts show a message. The episode menu → Download still offers the existing provider MP4 route. Stream URLs can expire while queued; interrupted jobs need a fresh link.
+
+The release passes **990 automated checks**. A short live two-chunk sample processed by the transfer code was identified as 1080p H.264 with AAC audio. Full Android tap/picker/queue behavior and live native custom-DNS transfers still need a phone check; this environment could not complete a native outbound DoH tunnel.
+
 ## Publishing later versions
 
 This repository stores public, pre-signed release files. Upload the four prepared files to `releases/vVERSION/` in one commit: the APK, `update.json`, `SHA256SUMS.txt` and `release-notes.md`.
