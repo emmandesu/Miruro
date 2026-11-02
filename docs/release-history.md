@@ -70,3 +70,11 @@ The native PiP button now sits just before Screenshot in the player's top-right 
 
 The API 36 APK retains the original owner signing identity. Automated checks cover toolbar geometry, resize, existing playback and bounded message validation. Actual overlay alignment and PiP operation still require device confirmation.
 
+
+## Security and lifecycle repairs in 1.0.29
+
+The app's local DNS proxy now requires fresh session credentials and enforces bounded authentication and fixed header deadlines. Browsing, downloads and updates retain the selected DNS route. Proxy authentication is prepared before site navigation, and failures do not silently switch DNS providers.
+
+Client dialogs and live diagnostics are lifecycle-owned, with log reading moved off the UI thread. Download pages and popup probes retire and dispose of failed renderers safely. A download permission ledger cleans up grants across restarts, rejected starts and history trimming while keeping completed video files.
+
+The original-signer API 36 build passes 1,312 automated checks, including authenticated native HTTPS transport, slow-header rejection, permission-ledger transitions and controlled renderer-callback races. Physical Android WebView authentication, startup/service-worker behavior and heap profiling still need device confirmation.

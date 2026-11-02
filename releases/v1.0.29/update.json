@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 30,
+  "versionName": "1.0.29",
+  "minSdk": 28,
+  "size": 584093,
+  "sha256": "641003f7023143566b21b62506471b9db8bb8c71a85150336591073e04642c3f",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.29/Miruro-1.0.29.apk",
+  "notes": "# Miruro 1.0.29\n\n## Security\n- Protected the app's local DNS proxy with fresh session credentials, bounded authentication and fixed header deadlines.\n- Browsing, download and update connections keep using the selected DNS provider. Proxy authentication is prepared before the website loads; there is no silent DNS fallback.\n\n## Fixes\n- Client dialogs and live diagnostic refresh now stop cleanly when the app screen is destroyed or replaced. Log reading runs off the UI thread.\n- Download pages and popup probes now dispose of failed web renderers safely.\n- Download file permissions are tracked across restarts and released when no longer needed. Completed videos are kept.\n\nSigned with the original Miruro certificate. Android WebView authentication and heap behavior still need device confirmation."
+}
