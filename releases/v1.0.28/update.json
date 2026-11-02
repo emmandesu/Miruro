@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 29,
+  "versionName": "1.0.28",
+  "minSdk": 28,
+  "size": 579997,
+  "sha256": "292f4cd85d61fa20c968d6163ad4d8a99bf5d8d10eae37b442dcff850efe49d4",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.28/Miruro-1.0.28.apk",
+  "notes": "# Miruro 1.0.28\n\n## Improved\n- Moved Picture in picture beside the icons at the top right of the player, just before Screenshot.\n- PiP follows the real toolbar position and spacing in fullscreen and inline playback, with matching white styling and control fades.\n- Kept native tap handling, touch-lock protection and the existing video session.\n\nThe update is signed with the original Miruro certificate. Playback and PiP behavior still require device confirmation."
+}

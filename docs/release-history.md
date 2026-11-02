@@ -63,3 +63,10 @@ Player events now include position/duration, buffering, decoder/network state, v
 Diagnostics adds a live viewer, pauseable refresh, issue marker/state capture, and structured JSON export with device/WebView/power context, recent Android process-exit codes where supported, and a field guide. Recording stays opt-in and local. Details are allowlisted numeric/boolean values; raw messages, full URLs, credentials and page/response text are excluded. Storage rotates within 1 MB and excessive frame events report a suppression count.
 
 The original-signer API 36 build passes **1,210 automated checks**. Actual Android event delivery remains device-dependent. This release collects evidence; it does not claim that every pause cause can be identified automatically or that the reported phone PiP issue has been physically verified.
+
+## PiP toolbar alignment in 1.0.28
+
+The native PiP button now sits just before Screenshot in the player's top-right icon row. It follows the actual toolbar's position and spacing in fullscreen and inline playback, with matching white styling and fade behavior. Touch lock disables it. Existing video playback, popup protection and PiP entry handling remain in place.
+
+The API 36 APK retains the original owner signing identity. Automated checks cover toolbar geometry, resize, existing playback and bounded message validation. Actual overlay alignment and PiP operation still require device confirmation.
+

@@ -61,7 +61,7 @@ For later updates, open **Client Settings → Support → App updates**. You can
 | **Fullscreen** | Opens the video in landscape and hides the status and navigation bars. |
 | **Orientation lock** | In fullscreen, tap the rotating-phone control above touch lock to allow rotation. Rotate the device, then lock again to hold the current angle. Exiting fullscreen restores the prior app rotation setting. |
 | **Touch lock** | Blocks accidental taps and swipes over the player. Tap the video to reveal Unlock; Back also unlocks. Unlock touches before changing orientation. |
-| **Picture in picture** | Tap the player’s left-side native PiP button, or leave the app while a supported video is playing. Android supplies Play/Pause, expand and close. |
+| **Picture in picture** | Tap PiP in the top-right icon row, just before Screenshot, or leave the app while a supported video is playing. Android supplies Play/Pause, expand and close. |
 | **Player Download icon** | Captures the current supported stream, checks its format, then asks where to save the full episode. |
 
 The lock buttons fade with the player controls. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
@@ -100,7 +100,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.27 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.28 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
@@ -122,3 +122,4 @@ PiP repair in 1.0.26 removes the duplicate audio-focus controller and moves manu
 Open **Client Settings → Support → Diagnostic logs**, enable recording, then reproduce the problem. Use **Capture state / mark issue** if helpful and choose **Export diagnostic report** to save the JSON file. Live events can be paused for reading.
 
 Version 1.0.27 adds a timed event timeline and player state snapshots, PiP decision flags and commands, categorized script/resource errors, renderer stalls and Android process-exit context where available. Reports exclude credentials, full URLs, page/response text and raw console messages. Recording cannot recover earlier events; a pause with no recent app command does not prove its cause. Logs rotate within 1 MB. **1,210 automated checks pass**; physical-device event delivery still needs verification.
+
