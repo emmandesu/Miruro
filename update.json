@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 29,
-  "versionName": "1.0.28",
+  "versionCode": 30,
+  "versionName": "1.0.29",
   "minSdk": 28,
-  "size": 579997,
-  "sha256": "292f4cd85d61fa20c968d6163ad4d8a99bf5d8d10eae37b442dcff850efe49d4",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.28/Miruro-1.0.28.apk",
-  "notes": "# Miruro 1.0.28\n\n## Improved\n- Moved Picture in picture beside the icons at the top right of the player, just before Screenshot.\n- PiP follows the real toolbar position and spacing in fullscreen and inline playback, with matching white styling and control fades.\n- Kept native tap handling, touch-lock protection and the existing video session.\n\nThe update is signed with the original Miruro certificate. Playback and PiP behavior still require device confirmation."
+  "size": 584093,
+  "sha256": "641003f7023143566b21b62506471b9db8bb8c71a85150336591073e04642c3f",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.29/Miruro-1.0.29.apk",
+  "notes": "# Miruro 1.0.29\n\n## Security\n- Protected the app's local DNS proxy with fresh session credentials, bounded authentication and fixed header deadlines.\n- Browsing, download and update connections keep using the selected DNS provider. Proxy authentication is prepared before the website loads; there is no silent DNS fallback.\n\n## Fixes\n- Client dialogs and live diagnostic refresh now stop cleanly when the app screen is destroyed or replaced. Log reading runs off the UI thread.\n- Download pages and popup probes now dispose of failed web renderers safely.\n- Download file permissions are tracked across restarts and released when no longer needed. Completed videos are kept.\n\nSigned with the original Miruro certificate. Android WebView authentication and heap behavior still need device confirmation."
 }
