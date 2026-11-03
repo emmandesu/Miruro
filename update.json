@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 30,
-  "versionName": "1.0.29",
+  "versionCode": 31,
+  "versionName": "1.0.30",
   "minSdk": 28,
-  "size": 584093,
-  "sha256": "641003f7023143566b21b62506471b9db8bb8c71a85150336591073e04642c3f",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.29/Miruro-1.0.29.apk",
-  "notes": "# Miruro 1.0.29\n\n## Security\n- Protected the app's local DNS proxy with fresh session credentials, bounded authentication and fixed header deadlines.\n- Browsing, download and update connections keep using the selected DNS provider. Proxy authentication is prepared before the website loads; there is no silent DNS fallback.\n\n## Fixes\n- Client dialogs and live diagnostic refresh now stop cleanly when the app screen is destroyed or replaced. Log reading runs off the UI thread.\n- Download pages and popup probes now dispose of failed web renderers safely.\n- Download file permissions are tracked across restarts and released when no longer needed. Completed videos are kept.\n\nSigned with the original Miruro certificate. Android WebView authentication and heap behavior still need device confirmation."
+  "size": 588189,
+  "sha256": "e352c6124665647c3c910261a1bede1b47531bd400ea8a837fb1072de7c39f64",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.30/Miruro-1.0.30.apk",
+  "notes": "# Miruro 1.0.30\n\n## New\n- Added a slim brightness slider at the far-left edge of the player, in normal and fullscreen viewing.\n- Slide up to brighten or down to dim. A sun icon and percentage show the level; tap the sun to restore device brightness.\n- The slider fades with player controls, stays visible while dragging, and is disabled when touch lock is enabled.\n- Brightness changes apply only inside Miruro. Leaving the player, opening Client Settings, backgrounding or entering PiP restores normal brightness.\n- Includes accessibility brightness adjustment and reset. No extra permission is needed.\n\nSigned with the original Miruro certificate. Physical-device brightness and alignment still need confirmation."
 }
