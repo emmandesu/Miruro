@@ -33,6 +33,7 @@
 A few more things that make everyday watching easier:
 
 - **Picture in picture.** Keep the current streaming video in a small Android window, with Play/Pause and a return to the existing player. Automatic entry while leaving during playback can be turned off.
+- **Player brightness.** A slim slider on the far left adjusts brightness in normal and fullscreen viewing. Slide up or down, or tap the sun to restore device brightness. It fades with controls and is disabled by touch lock.
 - **Playback-aware screen timeout.** The screen stays awake while a trusted video plays, including inline playback. Pausing, ending or backgrounding allows normal sleep.
 - **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
 - **Miruro links and backup domains.** Choose supported links in Android settings and manage Miruro addresses from Client Settings.
@@ -59,12 +60,13 @@ For later updates, open **Client Settings → Support → App updates**. You can
 | Control | What it does |
 | --- | --- |
 | **Fullscreen** | Opens the video in landscape and hides the status and navigation bars. |
+| **Brightness slider** | Slide the far-left bar up to brighten or down to dim (5–100%). Tap the sun to restore device brightness. |
 | **Orientation lock** | In fullscreen, tap the rotating-phone control above touch lock to allow rotation. Rotate the device, then lock again to hold the current angle. Exiting fullscreen restores the prior app rotation setting. |
 | **Touch lock** | Blocks accidental taps and swipes over the player. Tap the video to reveal Unlock; Back also unlocks. Unlock touches before changing orientation. |
 | **Picture in picture** | Tap PiP in the top-right icon row, just before Screenshot, or leave the app while a supported video is playing. Android supplies Play/Pause, expand and close. |
 | **Player Download icon** | Captures the current supported stream, checks its format, then asks where to save the full episode. |
 
-The lock buttons fade with the player controls. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
+The lock buttons and brightness slider fade with the player controls. Brightness stays local to this app and returns to normal when you leave the player, open Client Settings, background Miruro or enter PiP. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
 
 **PiP settings:** open **Client Settings → General → Player → Picture in picture** for manual entry, automatic-entry preference and the Android permission shortcut. The current `strm.cx` player and direct Miruro media-player/control-enabled video are supported. Paused or ended videos do not open automatically. Closing the small window pauses playback; expanding returns to the same player. Android displays a playback notification while PiP is active. A supported device, PiP permission and a current WebView are required.
 
@@ -100,9 +102,9 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.29 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.30 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
-The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
+The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
 </details>
 
@@ -122,4 +124,5 @@ PiP repair in 1.0.26 removes the duplicate audio-focus controller and moves manu
 Open **Client Settings → Support → Diagnostic logs**, enable recording, then reproduce the problem. Use **Capture state / mark issue** if helpful and choose **Export diagnostic report** to save the JSON file. Live events can be paused for reading.
 
 Version 1.0.27 adds a timed event timeline and player state snapshots, PiP decision flags and commands, categorized script/resource errors, renderer stalls and Android process-exit context where available. Reports exclude credentials, full URLs, page/response text and raw console messages. Recording cannot recover earlier events; a pause with no recent app command does not prove its cause. Logs rotate within 1 MB. **1,210 automated checks pass**; physical-device event delivery still needs verification.
+
 

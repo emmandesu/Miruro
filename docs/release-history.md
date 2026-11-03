@@ -78,3 +78,12 @@ The app's local DNS proxy now requires fresh session credentials and enforces bo
 Client dialogs and live diagnostics are lifecycle-owned, with log reading moved off the UI thread. Download pages and popup probes retire and dispose of failed renderers safely. A download permission ledger cleans up grants across restarts, rejected starts and history trimming while keeping completed video files.
 
 The original-signer API 36 build passes 1,312 automated checks, including authenticated native HTTPS transport, slow-header rejection, permission-ledger transitions and controlled renderer-callback races. Physical Android WebView authentication, startup/service-worker behavior and heap profiling still need device confirmation.
+
+## Player brightness in 1.0.30
+
+A slim slider sits on the far-left edge of the player in normal and fullscreen playback. Slide up or down to adjust from 5–100%; the sun icon restores device brightness. Its white/lavender styling and percentage readout fade with the player controls. A held drag stays visible until release, and touch lock cancels and disables adjustment. Only the slider's own target captures its gesture.
+
+Brightness uses the app window, without changing the device's system setting or requesting another permission. Leaving the player, opening Client Settings, backgrounding or entering PiP restores normal brightness; returning reuses the session selection. Accessibility range adjustment and reset are included.
+
+The original-signer API 36 release passes **1,368 automated checks**, including 56 production brightness, gesture, restoration and accessibility checks with Android view doubles. Physical-device luminance, native overlay placement and provider fades still need phone confirmation.
+
