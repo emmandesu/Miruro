@@ -87,3 +87,11 @@ Brightness uses the app window, without changing the device's system setting or 
 
 The original-signer API 36 release passes **1,368 automated checks**, including 56 production brightness, gesture, restoration and accessibility checks with Android view doubles. Physical-device luminance, native overlay placement and provider fades still need phone confirmation.
 
+
+## Brightness visibility recovery in 1.0.31
+
+Fixed a native activation path that could leave the brightness slider missing after player resets or episode/history changes while fullscreen continued. Slider state now follows the live overlay through attachment, window visibility, layout and foreground changes, so this recovery no longer requires exiting and re-entering fullscreen. Normal fades, touch lock, PiP/settings suspension and system-brightness restoration remain intact.
+
+Opt-in logs now include deduplicated native overlay and brightness state, plus explicit diagnostic snapshots. Records distinguish attachment, visibility, enabled/dragging state, percentage and bounded geometry without adding URLs or page content.
+
+The original-signer API 36 release passes **1,420 automated checks**. The old reset failure was reproduced against the actual 1.0.30 overlay; the repaired code passes that test and 49 overlay/controller regression checks using Android view doubles. The supplied log did not contain slider state, so it cannot establish the exact trigger on the phone. Confirmation on the affected device is still needed.

@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 32,
+  "versionName": "1.0.31",
+  "minSdk": 28,
+  "size": 588189,
+  "sha256": "2ec3e64602333ad34dc466873609be133070132f1295837fc5f5b2648acdc5ad",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.31/Miruro-1.0.31.apk",
+  "notes": "# Miruro 1.0.31\n\n## Fixes\n- Fixed brightness controls staying missing after player resets or episode changes in fullscreen. Exiting and re-entering fullscreen is no longer needed for this recovery path.\n- Restored the slider correctly after temporary view reattachment, resize, background/resume and window visibility changes.\n- Preserved normal control fading, touch lock, PiP/settings suspension and system-brightness restoration.\n\n## Diagnostics\n- Added native player-overlay and brightness state to opt-in logs and exported snapshots to help diagnose visibility issues.\n\nSigned with the original Miruro certificate. Regression tests reproduce the old reset failure and pass with this repair; confirmation on the affected phone is still needed."
+}
