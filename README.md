@@ -44,6 +44,17 @@ A few more things that make everyday watching easier:
 
 > Notification delivery follows the website receiving or rendering its notices. It is not server push while Android has closed the app. Update checks run daily when opened, or manually.
 
+
+## Android TV edition
+
+<img src="docs/assets/miruro-tv-banner.png" alt="Miruro TV launcher banner" width="320">
+
+**[Download Miruro TV · v1.0.0_tv](https://github.com/emmandesu/Miruro/releases/tag/v1.0.0_tv)**
+
+A separate TV app with a native navigation rail, clear D-pad focus, TV keyboard input and a fading playback control bar. Browse with the arrows and OK; on the player, OK plays/pauses, Left/Right seeks ten seconds and Up opens controls. It installs alongside the phone app and uses its own TV update channel.
+
+Requires **Android TV / Google TV with Android 9+ and an up-to-date Android System WebView**. Xiaomi-style standard remotes are supported by the input mapping; physical-device confirmation remains pending. See the [TV setup and remote guide](docs/android-tv.md) for installation, compatibility and controls.
+
 ## Get started
 
 1. Open the **[latest release](https://github.com/emmandesu/Miruro/releases/latest)** and download its signed `.apk`.
