@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 33,
-  "versionName": "1.0.32",
+  "versionCode": 34,
+  "versionName": "1.0.33",
   "minSdk": 28,
   "size": 592285,
-  "sha256": "f6ae09bea0574ff8483d533e30b1ba768b1cd2cc09493c0092f29a1b9052eb13",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.32/Miruro-1.0.32.apk",
-  "notes": "# Miruro 1.0.32\n\n## Player\n- Added a compact episode number and title at the top-left of the player, in normal and fullscreen viewing.\n- Long titles end with an ellipsis before the top-right buttons. The label fades with controls and hides during touch lock, PiP and Client Settings.\n- Reduced the large duplicate episode heading below the player.\n- Episode changes update the label without leaving fullscreen; old page callbacks cannot restore the previous episode's title.\n\nSigned with the original Miruro certificate. Automated checks pass; visual placement and fading still need confirmation on a phone. This update is for the phone app; the TV edition is unchanged."
+  "sha256": "8aff50598469dfa13b4f9a677555c494a5782349f3c4207512bea99fc194d25a",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.33/Miruro-1.0.33.apk",
+  "notes": "# Miruro 1.0.33\n\n## Player\n- Removed the wide dark bar behind the episode title. Small white text with a soft shadow sits directly over the video.\n- Fixed the inline title being pushed down by a notch offset that was already above the player.\n- Reserved space between the title and brightness slider to prevent overlap on smaller players.\n- Preserved fullscreen cutout protection, title shortening and control fading through resizing and fullscreen return.\n\n## Diagnostics\n- Added numeric title/slider positions and effective safe insets to opt-in overlay logs. Episode text is not recorded.\n\nSigned with the original Miruro certificate. The previous inset failure was reproduced and the corrected regression checks pass. Visual confirmation on the phone is still needed. The TV edition is unchanged."
 }
