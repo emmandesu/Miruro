@@ -103,3 +103,11 @@ The current episode number and title now appear in a small, single-line label at
 Episode details come from the current Miruro watch row and update while fullscreen. Navigation clears the old label, and stale document callbacks cannot restore it. Text is bounded and rendered as plain text; titles are not added to diagnostic logs. Playback and existing player controls remain on the same paths.
 
 The original-signer API 36 phone release passes **1,477 automated checks**, including current watch-markup extraction and actual native overlay/controller checks with Android doubles. Visual alignment and fades still need confirmation on a phone. The separate TV release and update channel are unchanged.
+
+## Episode label spacing in 1.0.33
+
+Removed the wide dark background from the episode label. Compact white text with a soft shadow now sits directly over the picture, with no rectangular bar. The label remains at the top-left, shortens before the toolbar and fades with the player controls.
+
+Inline player insets now account for the player’s actual position in the window: a notch already above the header is not applied a second time. A reserved title band keeps the brightness slider below the label on smaller players. Fullscreen retains protection for actual cutout overlap, and layout changes recalculate the spacing. Opt-in diagnostic snapshots include numeric caption/slider positions and effective safe insets without episode text.
+
+The original-signer API 36 phone release passes **1,495 automated checks**. A regression check reproduced the previous inline inset failure; corrected checks cover a transparent label, compact player spacing, notch placement, resizing, fades and fullscreen return using Android view doubles. Final visual confirmation on the phone is still needed. The TV edition and its update channel are unchanged.
