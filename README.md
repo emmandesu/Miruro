@@ -33,6 +33,7 @@
 A few more things that make everyday watching easier:
 
 - **Picture in picture.** Keep the current streaming video in a small Android window, with Play/Pause and a return to the existing player. Automatic entry while leaving during playback can be turned off.
+- **Compact episode label.** The episode number and title sit at the player’s top-left, including fullscreen, and fade with controls. Long titles shorten before the toolbar.
 - **Player brightness.** A slim slider on the far left adjusts brightness in normal and fullscreen viewing. Slide up or down, or tap the sun to restore device brightness. It fades with controls and is disabled by touch lock.
 - **Playback-aware screen timeout.** The screen stays awake while a trusted video plays, including inline playback. Pausing, ending or backgrounding allows normal sleep.
 - **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
@@ -113,7 +114,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.31 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.32 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 

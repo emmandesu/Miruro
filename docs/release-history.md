@@ -95,3 +95,11 @@ Fixed a native activation path that could leave the brightness slider missing af
 Opt-in logs now include deduplicated native overlay and brightness state, plus explicit diagnostic snapshots. Records distinguish attachment, visibility, enabled/dragging state, percentage and bounded geometry without adding URLs or page content.
 
 The original-signer API 36 release passes **1,420 automated checks**. The old reset failure was reproduced against the actual 1.0.30 overlay; the repaired code passes that test and 49 overlay/controller regression checks using Android view doubles. The supplied log did not contain slider state, so it cannot establish the exact trigger on the phone. Confirmation on the affected device is still needed.
+
+## Compact episode heading in 1.0.32
+
+The current episode number and title now appear in a small, single-line label at the player’s top-left in normal and fullscreen viewing. It follows the player controls’ fade and hides during touch lock, PiP and Client Settings. Long titles end with an ellipsis before the top-right toolbar; display cutouts are respected. The duplicate heading below the player is smaller.
+
+Episode details come from the current Miruro watch row and update while fullscreen. Navigation clears the old label, and stale document callbacks cannot restore it. Text is bounded and rendered as plain text; titles are not added to diagnostic logs. Playback and existing player controls remain on the same paths.
+
+The original-signer API 36 phone release passes **1,477 automated checks**, including current watch-markup extraction and actual native overlay/controller checks with Android doubles. Visual alignment and fades still need confirmation on a phone. The separate TV release and update channel are unchanged.
