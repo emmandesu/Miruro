@@ -111,3 +111,11 @@ Removed the wide dark background from the episode label. Compact white text with
 Inline player insets now account for the player’s actual position in the window: a notch already above the header is not applied a second time. A reserved title band keeps the brightness slider below the label on smaller players. Fullscreen retains protection for actual cutout overlap, and layout changes recalculate the spacing. Opt-in diagnostic snapshots include numeric caption/slider positions and effective safe insets without episode text.
 
 The original-signer API 36 phone release passes **1,495 automated checks**. A regression check reproduced the previous inline inset failure; corrected checks cover a transparent label, compact player spacing, notch placement, resizing, fades and fullscreen return using Android view doubles. Final visual confirmation on the phone is still needed. The TV edition and its update channel are unchanged.
+
+## Fullscreen-only brightness in 1.0.34
+
+The brightness slider now appears and accepts input only in fullscreen. Inline playback uses normal device brightness, keeping the seek bar, elapsed time and other player controls clear. Leaving fullscreen immediately hides and disables the slider, cancels an active drag and restores the previous window brightness. The fullscreen selection is retained for the next fullscreen session in the same app session.
+
+Late control messages, layout/inset updates, resume and view reattachment cannot reactivate it inline. Fullscreen control fades, touch lock and PiP/Client Settings suspension remain supported. The episode label stays available in normal and fullscreen viewing.
+
+The signed API 36 phone build passes **167 focused automated checks**: 56 brightness/gesture/restoration/accessibility checks and 111 native overlay/controller checks using Android doubles. The old overlay failed the new inline-disabled expectation; the corrected code passes, including exit during a drag, immediate hiding with deferred animation completion and controller fullscreen reentry. Hardware brightness and visual confirmation on a phone remain pending. The TV edition and its update channel are unchanged.

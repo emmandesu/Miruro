@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "packageName": "com.emflo.miruro",
+  "versionCode": 35,
+  "versionName": "1.0.34",
+  "minSdk": 28,
+  "size": 592285,
+  "sha256": "7bcd4ec0dc3a6fc2c31f123550d8566a402673427b0a4b969f980f2a2de4c511",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.34/Miruro-1.0.34.apk",
+  "notes": "# Miruro 1.0.34\n\n## Player\n- Brightness controls now appear and work only in fullscreen, keeping normal player controls clear.\n- Exiting fullscreen immediately hides the slider, cancels any drag and restores normal device brightness.\n- Returning to fullscreen restores the session's brightness selection. Control fading, touch lock and PiP/Client Settings suspension still apply.\n- The episode title remains available in normal and fullscreen viewing.\n\nSigned with the original Miruro certificate. Focused brightness and native overlay/controller checks pass. Hardware brightness and visual confirmation on a phone remain pending. The TV edition is unchanged."
+}

@@ -33,8 +33,8 @@
 A few more things that make everyday watching easier:
 
 - **Picture in picture.** Keep the current streaming video in a small Android window, with Play/Pause and a return to the existing player. Automatic entry while leaving during playback can be turned off.
-- **Compact episode label.** The episode number and title sit at the player’s top-left as small, shadowed text, including fullscreen, and fade with controls. Long titles shorten before the toolbar; the brightness slider has its own space below.
-- **Player brightness.** A slim slider on the far left adjusts brightness in normal and fullscreen viewing. Slide up or down, or tap the sun to restore device brightness. It fades with controls and is disabled by touch lock.
+- **Compact episode label.** The episode number and title sit at the player’s top-left as small, shadowed text, including fullscreen, and fade with controls. Long titles shorten before the toolbar; fullscreen brightness has its own space below.
+- **Player brightness.** A slim slider on the far left adjusts brightness only in fullscreen. Inline playback uses device brightness. Slide up or down, or tap the sun to restore device brightness. It fades with controls and is disabled by touch lock.
 - **Playback-aware screen timeout.** The screen stays awake while a trusted video plays, including inline playback. Pausing, ending or backgrounding allows normal sleep.
 - **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
 - **Miruro links and backup domains.** Choose supported links in Android settings and manage Miruro addresses from Client Settings.
@@ -72,13 +72,13 @@ For later updates, open **Client Settings → Support → App updates**. You can
 | Control | What it does |
 | --- | --- |
 | **Fullscreen** | Opens the video in landscape and hides the status and navigation bars. |
-| **Brightness slider** | Slide the far-left bar up to brighten or down to dim (5–100%). Tap the sun to restore device brightness. |
+| **Brightness slider** | In fullscreen only, slide the far-left bar up to brighten or down to dim (5–100%). Tap the sun to restore device brightness. |
 | **Orientation lock** | In fullscreen, tap the rotating-phone control above touch lock to allow rotation. Rotate the device, then lock again to hold the current angle. Exiting fullscreen restores the prior app rotation setting. |
 | **Touch lock** | Blocks accidental taps and swipes over the player. Tap the video to reveal Unlock; Back also unlocks. Unlock touches before changing orientation. |
 | **Picture in picture** | Tap PiP in the top-right icon row, just before Screenshot, or leave the app while a supported video is playing. Android supplies Play/Pause, expand and close. |
 | **Player Download icon** | Captures the current supported stream, checks its format, then asks where to save the full episode. |
 
-The lock buttons and brightness slider fade with the player controls. Brightness stays local to this app and returns to normal when you leave the player, open Client Settings, background Miruro or enter PiP. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
+The lock buttons and brightness slider fade with the player controls. Brightness stays local to this app and returns to normal when you exit fullscreen, open Client Settings, background Miruro or enter PiP. The slider is hidden and disabled during inline playback. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
 
 **PiP settings:** open **Client Settings → General → Player → Picture in picture** for manual entry, automatic-entry preference and the Android permission shortcut. The current `strm.cx` player and direct Miruro media-player/control-enabled video are supported. Paused or ended videos do not open automatically. Closing the small window pauses playback; expanding returns to the same player. Android displays a playback notification while PiP is active. A supported device, PiP permission and a current WebView are required.
 
@@ -114,7 +114,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.33 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes automated regression checks and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Coverage includes navigation and popup policy, player state, download validation and queue behavior, notification deduplication, update verification and the stream-download bridge.
+The 1.0.34 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes 167 focused brightness, gesture, accessibility and native overlay/controller checks using Android doubles, and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Existing navigation, downloads, notifications and update verification stay on their previous paths.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
