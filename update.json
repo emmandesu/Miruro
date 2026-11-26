@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 35,
-  "versionName": "1.0.34",
+  "versionCode": 36,
+  "versionName": "1.0.35",
   "minSdk": 28,
   "size": 592285,
-  "sha256": "7bcd4ec0dc3a6fc2c31f123550d8566a402673427b0a4b969f980f2a2de4c511",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.34/Miruro-1.0.34.apk",
-  "notes": "# Miruro 1.0.34\n\n## Player\n- Brightness controls now appear and work only in fullscreen, keeping normal player controls clear.\n- Exiting fullscreen immediately hides the slider, cancels any drag and restores normal device brightness.\n- Returning to fullscreen restores the session's brightness selection. Control fading, touch lock and PiP/Client Settings suspension still apply.\n- The episode title remains available in normal and fullscreen viewing.\n\nSigned with the original Miruro certificate. Focused brightness and native overlay/controller checks pass. Hardware brightness and visual confirmation on a phone remain pending. The TV edition is unchanged."
+  "sha256": "31539b6be3ac4d9a7d4d8102a908c5d307c1cd89c4c4a1636c7ec811b8163815",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.35/Miruro-1.0.35.apk",
+  "notes": "# Miruro 1.0.35\n\n## Connection\n- AdGuard is now the default DNS provider. Open Client Settings \u2192 Connection to choose AdGuard, Cloudflare (1.1.1.1), or System DNS.\n- NextDNS has been removed. If you used it, the update switches you to AdGuard. Existing AdGuard and System DNS selections stay as they are.\n- Browsing, stream preparation, new downloads and app updates use your selection. Changing providers reloads the current page; active downloads keep their original provider."
 }
