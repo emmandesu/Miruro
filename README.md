@@ -39,6 +39,7 @@ A few more things that make everyday watching easier:
 - **Community sign-in.** The comments panel can open The Anime Community’s login and registration windows. Community accounts are separate from AniList.
 - **Miruro links and backup domains.** Choose supported links in Android settings and manage Miruro addresses from Client Settings.
 - **Connection feedback.** A small banner tells you when the connection is lost or restored.
+- **Playback recovery.** If the connection comes back but the video remains stuck, use **Retry** on the player to reconnect or reload the current episode. See [GitHub issue #1](https://github.com/emmandesu/Miruro/issues/1).
 - **Notifications in two places.** Mirror the website’s Miruro/AniList notices to Android, and see available app updates inside the site’s notification panel.
 - **A welcome that knows when to leave.** The animated Miruro loading screen is for initial startup, with anime quotes and a first-use menu guide.
 - **Detailed diagnostics.** Live player/PiP state, buffering and pause-command correlation, lifecycle/renderer errors, resource failures, issue markers and JSON export. Recording is opt-in and local, with no automatic uploads.
@@ -114,7 +115,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.38 phone release targets **API 36 (Android 16)** and requires **Android 9** or later. Local tests cover the personalized AniList “Taking you back…” screen, cleaned return URLs, cancellation and safe navigation to Home. A live account sign-in on a phone remains unverified. The APK is signed with the original Miruro certificate.
+The 1.0.39 phone release targets **API 36 (Android 16)** and requires **Android 9** or later. Local tests cover the personalized AniList “Taking you back…” screen, cleaned return URLs, cancellation and safe navigation to Home. A live account sign-in on a phone remains unverified. The APK is signed with the original Miruro certificate.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 

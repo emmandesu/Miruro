@@ -135,3 +135,9 @@ After Miruro confirms sign-in, a callback stuck on Welcome returns to Home. If s
 ## AniList Welcome screen in 1.0.38
 
 When Miruro shows a personalized Welcome followed by “Taking you back…”, the phone app waits briefly for the site, then returns to Home. It works if the site has already cleaned the callback URL or used a different return page. If the preceding page was Home the app can use Android WebView history; otherwise it opens Home on the same Miruro domain. Pending or denied sign-ins stay on the site. Optional diagnostics record the return action without the name or callback URL.
+
+## Playback recovery in 1.0.39
+
+If a stream stops advancing for 12 seconds or reports an error, a recovery card appears over the player. When Android reports the connection is back, Miruro leaves a short grace period and attempts to restart loading once for supported players. Tap **Retry** if playback remains stuck. A full episode reload is only triggered by a tap. It may exit fullscreen or require you to tap Play, and seeks to the last position when the new stream becomes seekable.
+
+[GitHub issue #1](https://github.com/emmandesu/Miruro/issues/1)
