@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 36,
-  "versionName": "1.0.35",
+  "versionCode": 37,
+  "versionName": "1.0.36",
   "minSdk": 28,
-  "size": 592285,
-  "sha256": "31539b6be3ac4d9a7d4d8102a908c5d307c1cd89c4c4a1636c7ec811b8163815",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.35/Miruro-1.0.35.apk",
-  "notes": "# Miruro 1.0.35\n\n## Connection\n- AdGuard is now the default DNS provider. Open Client Settings \u2192 Connection to choose AdGuard, Cloudflare (1.1.1.1), or System DNS.\n- NextDNS has been removed. If you used it, the update switches you to AdGuard. Existing AdGuard and System DNS selections stay as they are.\n- Browsing, stream preparation, new downloads and app updates use your selection. Changing providers reloads the current page; active downloads keep their original provider."
+  "size": 600477,
+  "sha256": "344f65330cc5202b27ac9813c84134d5ace6919c5c98f18532a412c0d33a0b18",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.36/Miruro-1.0.36.apk",
+  "notes": "# Miruro 1.0.36\n\n## Client Settings\n- The phone settings now match Miruro v2.1: a rounded bottom sheet, grouped rows and the website\u2019s theme colors.\n- Search for DNS, brightness, PiP, updates and other client settings. Back from a setting restores your search.\n- Client Settings and Downloads work with the redesigned website menu. The two-finger backup gesture is still available."
 }
