@@ -131,3 +131,7 @@ The phone app now has a searchable settings directory with grouped rows and a ro
 ## AniList sign-in in 1.0.37
 
 After Miruro confirms sign-in, a callback stuck on Welcome returns to Home. If sign-in opened in a separate window, the main window opens Home on the same Miruro domain. The website still handles the account and OAuth response. Closing the window manually or declining consent does not trigger the success shortcut.
+
+## AniList Welcome screen in 1.0.38
+
+When Miruro shows a personalized Welcome followed by “Taking you back…”, the phone app waits briefly for the site, then returns to Home. It works if the site has already cleaned the callback URL or used a different return page. If the preceding page was Home the app can use Android WebView history; otherwise it opens Home on the same Miruro domain. Pending or denied sign-ins stay on the site. Optional diagnostics record the return action without the name or callback URL.
