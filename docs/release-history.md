@@ -127,3 +127,7 @@ AdGuard is now the phone app's default DNS provider. In **Client Settings → Co
 ## Client Settings for Miruro v2.1 in 1.0.36
 
 The phone app now has a searchable settings directory with grouped rows and a rounded bottom sheet. The sheet follows the website’s palette, including translucent borders. Client Settings and Downloads can appear alongside the redesigned mobile menu’s own Settings row. Updates and diagnostics remain under Support.
+
+## AniList sign-in in 1.0.37
+
+After Miruro confirms sign-in, a callback stuck on Welcome returns to Home. If sign-in opened in a separate window, the main window opens Home on the same Miruro domain. The website still handles the account and OAuth response. Closing the window manually or declining consent does not trigger the success shortcut.
