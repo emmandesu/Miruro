@@ -123,3 +123,7 @@ The signed API 36 phone build passes **167 focused automated checks**: 56 bright
 ## DNS choices in 1.0.35
 
 AdGuard is now the phone app's default DNS provider. In **Client Settings → Connection**, choose AdGuard, Cloudflare (1.1.1.1) or System DNS. NextDNS users move to AdGuard on upgrade; existing AdGuard and System DNS selections are preserved. Supported browsing, stream preparation, new episode downloads and app update checks/downloads all use the same setting. Changing providers reloads the page without rerouting transfers in progress.
+
+## Client Settings for Miruro v2.1 in 1.0.36
+
+The phone app now has a searchable settings directory with grouped rows and a rounded bottom sheet. The sheet follows the website’s palette, including translucent borders. Client Settings and Downloads can appear alongside the redesigned mobile menu’s own Settings row. Updates and diagnostics remain under Support.

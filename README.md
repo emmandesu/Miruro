@@ -80,7 +80,7 @@ For later updates, open **Client Settings → Support → App updates**. You can
 
 The lock buttons and brightness slider fade with the player controls. Brightness stays local to this app and returns to normal when you exit fullscreen, open Client Settings, background Miruro or enter PiP. The slider is hidden and disabled during inline playback. Miruro continues to use the website’s player; it does not replace playback with a separate native anime player.
 
-**PiP settings:** open **Client Settings → General → Player → Picture in picture** for manual entry, automatic-entry preference and the Android permission shortcut. The current `strm.cx` player and direct Miruro media-player/control-enabled video are supported. Paused or ended videos do not open automatically. Closing the small window pauses playback; expanding returns to the same player. Android displays a playback notification while PiP is active. A supported device, PiP permission and a current WebView are required.
+**PiP settings:** open **Client Settings → Preferences → Picture in picture** for manual entry, automatic-entry preference and the Android permission shortcut. The current `strm.cx` player and direct Miruro media-player/control-enabled video are supported. Paused or ended videos do not open automatically. Closing the small window pauses playback; expanding returns to the same player. Android displays a playback notification while PiP is active. A supported device, PiP permission and a current WebView are required.
 
 ## Downloads
 
@@ -103,7 +103,7 @@ Popup and redirect protection reduces unwanted external windows. It does not gua
 
 ## Help, credits and project details
 
-- **Menu access:** open Miruro’s website menu, then select **Client Settings**. A two-finger tap outside fullscreen reveals the backup menu button.
+- **Menu access:** open Miruro’s website menu, then select **Client Settings**. Search the sheet for terms like “DNS” or “brightness,” or browse Preferences, Connection, Shortcuts and Support. A two-finger tap outside fullscreen reveals the backup menu button.
 - **Report an issue:** enable **Client Settings → Support → Diagnostics**, reproduce the problem, and export the log. Review it before attaching it to an [issue](https://github.com/emmandesu/Miruro/issues).
 - **Licenses and credits:** **Client Settings → Support → Licenses & credits** includes the bundled AndroidX libraries, Chromium boundary interfaces and Karla font, with offline license texts and acknowledgements.
 - **Release history:** read [what changed](docs/release-history.md) or browse [GitHub Releases](https://github.com/emmandesu/Miruro/releases).
@@ -114,7 +114,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.35 phone release targets **API 36 (Android 16)** and requires **API 28 (Android 9)** or later. It passes 1,001 JVM checks, including 20 covering DNS preferences, upgrades and resolver routing. The APK is signed with the original Miruro certificate.
+The 1.0.36 phone release targets **API 36 (Android 16)** and requires **API 28 (Android 9)** or later. It passes 1,036 JVM checks, including settings search, origin checks and theme parsing. The menu integration is also tested against local DOM fixtures. The APK is signed with the original Miruro certificate.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
