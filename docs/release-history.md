@@ -119,3 +119,7 @@ The brightness slider now appears and accepts input only in fullscreen. Inline p
 Late control messages, layout/inset updates, resume and view reattachment cannot reactivate it inline. Fullscreen control fades, touch lock and PiP/Client Settings suspension remain supported. The episode label stays available in normal and fullscreen viewing.
 
 The signed API 36 phone build passes **167 focused automated checks**: 56 brightness/gesture/restoration/accessibility checks and 111 native overlay/controller checks using Android doubles. The old overlay failed the new inline-disabled expectation; the corrected code passes, including exit during a drag, immediate hiding with deferred animation completion and controller fullscreen reentry. Hardware brightness and visual confirmation on a phone remain pending. The TV edition and its update channel are unchanged.
+
+## DNS choices in 1.0.35
+
+AdGuard is now the phone app's default DNS provider. In **Client Settings → Connection**, choose AdGuard, Cloudflare (1.1.1.1) or System DNS. NextDNS users move to AdGuard on upgrade; existing AdGuard and System DNS selections are preserved. Supported browsing, stream preparation, new episode downloads and app update checks/downloads all use the same setting. Changing providers reloads the page without rerouting transfers in progress.

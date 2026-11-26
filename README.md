@@ -26,7 +26,7 @@
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="docs/assets/miruro-features-mobile.png">
-    <img src="docs/assets/miruro-features.png" alt="Features: immersive fullscreen with touch and rotation locks; a download queue with progress and cancellation; NextDNS and AdGuard options; website AniList sign-in; in-app updates with release notes; and themed Client Settings with popup protection and diagnostics." width="100%">
+    <img src="docs/assets/miruro-features.png" alt="Features: immersive fullscreen with touch and rotation locks; a download queue with progress and cancellation; AdGuard, Cloudflare and System DNS options; website AniList sign-in; in-app updates with release notes; and themed Client Settings with popup protection and diagnostics." width="100%">
   </picture>
 </p>
 
@@ -97,7 +97,7 @@ Playlists and files use the DNS provider selected when the job starts. Stream li
 
 ## Connection and protection
 
-Choose **NextDNS** using the `ac7389` profile, **AdGuard DNS**, or **System DNS** in **Client Settings → Connection**. The selection applies to supported app connections, native downloads and update checks. Encrypted DNS does not silently fall back to System DNS.
+On the phone, open **Client Settings → Connection**. **AdGuard DNS** is the default and filters ad and tracker domains. Choose **Cloudflare** for standard 1.1.1.1 DNS over HTTPS, or **System DNS** to use Android’s resolver. The app uses this choice for browsing, stream preparation, new downloads and update checks/downloads. Encrypted lookups do not silently fall back to System DNS. Upgrading from NextDNS switches to AdGuard; existing AdGuard and System DNS choices are kept.
 
 Popup and redirect protection reduces unwanted external windows. It does not guarantee that every advertisement is removed. Video availability, streaming quality and provider behavior remain controlled by Miruro and its sources.
 
@@ -114,7 +114,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.34 release compiles against and targets **API 36 (Android 16)**, with minimum API 28 (Android 9). It passes 167 focused brightness, gesture, accessibility and native overlay/controller checks using Android doubles, and retains the original owner signing identity. The compiled APK’s SDK levels, version and signing certificate are verified; release preparation rejects mismatched SDK levels. Existing navigation, downloads, notifications and update verification stay on their previous paths.
+The 1.0.35 phone release targets **API 36 (Android 16)** and requires **API 28 (Android 9)** or later. It passes 1,001 JVM checks, including 20 covering DNS preferences, upgrades and resolver routing. The APK is signed with the original Miruro certificate.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
