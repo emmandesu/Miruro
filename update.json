@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "packageName": "com.emflo.miruro",
-  "versionCode": 38,
-  "versionName": "1.0.37",
+  "versionCode": 39,
+  "versionName": "1.0.38",
   "minSdk": 28,
   "size": 604643,
-  "sha256": "bef393c700a1e8daedd0a5d08bd34965368f3b800d3ea13de3f630c302f4ee96",
-  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.37/Miruro-1.0.37.apk",
-  "notes": "# Miruro 1.0.37\n\n## AniList sign-in\n- Miruro now returns to Home when a successful sign-in gets stuck on the Welcome screen.\n- When a sign-in popup reaches Home, it closes and Home opens in the main app window.\n- Cancelling or declining sign-in leaves the original page in place."
+  "sha256": "12770930f8114216f85f2c28bbec6bc9d1b4d0fcc288bd0fe792aa8d63f5cbfa",
+  "apkUrl": "https://github.com/emmandesu/Miruro/releases/download/v1.0.38/Miruro-1.0.38.apk",
+  "notes": "# Miruro 1.0.38\n\n## AniList sign-in\n- Fix the \u201cWelcome / Taking you back\u2026\u201d screen staying open after sign-in, including when the callback address has already changed.\n- Return to Home automatically without asking you to press Back or sign in again.\n- Optional diagnostics record which return action ran, without recording a username or sign-in link."
 }
