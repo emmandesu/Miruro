@@ -141,3 +141,9 @@ When Miruro shows a personalized Welcome followed by “Taking you back…”, t
 If a stream stops advancing for 12 seconds or reports an error, a recovery card appears over the player. When Android reports the connection is back, Miruro leaves a short grace period and attempts to restart loading once for supported players. Tap **Retry** if playback remains stuck. A full episode reload is only triggered by a tap. It may exit fullscreen or require you to tap Play, and seeks to the last position when the new stream becomes seekable.
 
 [GitHub issue #1](https://github.com/emmandesu/Miruro/issues/1)
+
+## Client Settings navigation in 1.0.40
+
+**Back to menu** returns from Client Settings to the same Miruro website menu it opened from. Settings pages show a labeled Back action that returns to their parent. Going back to the Client Settings list restores its search filter and scroll position. Android Back follows the same path. **×** closes the settings flow.
+
+[GitHub issue #2](https://github.com/emmandesu/Miruro/issues/2)

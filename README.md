@@ -104,7 +104,7 @@ Popup and redirect protection reduces unwanted external windows. It does not gua
 
 ## Help, credits and project details
 
-- **Menu access:** open Miruro’s website menu, then select **Client Settings**. Search the sheet for terms like “DNS” or “brightness,” or browse Preferences, Connection, Shortcuts and Support. A two-finger tap outside fullscreen reveals the backup menu button.
+- **Menu access:** open Miruro’s website menu, then select **Client Settings**. Use **Back to menu** to return to the drawer. Search the sheet for terms like “DNS” or “brightness,” or browse Preferences, Connection, Shortcuts and Support. A two-finger tap outside fullscreen reveals the backup menu button.
 - **Report an issue:** enable **Client Settings → Support → Diagnostics**, reproduce the problem, and export the log. Review it before attaching it to an [issue](https://github.com/emmandesu/Miruro/issues).
 - **Licenses and credits:** **Client Settings → Support → Licenses & credits** includes the bundled AndroidX libraries, Chromium boundary interfaces and Karla font, with offline license texts and acknowledgements.
 - **Release history:** read [what changed](docs/release-history.md) or browse [GitHub Releases](https://github.com/emmandesu/Miruro/releases).
@@ -115,7 +115,7 @@ This repository distributes pre-signed APK releases and update metadata. Applica
 <details>
 <summary><strong>Verification and known testing limits</strong></summary>
 
-The 1.0.39 phone release targets **API 36 (Android 16)** and requires **Android 9** or later. Local tests cover the personalized AniList “Taking you back…” screen, cleaned return URLs, cancellation and safe navigation to Home. A live account sign-in on a phone remains unverified. The APK is signed with the original Miruro certificate.
+The 1.0.40 phone release targets **API 36 (Android 16)** and requires **Android 9** or later. Local tests cover the personalized AniList “Taking you back…” screen, cleaned return URLs, cancellation and safe navigation to Home. A live account sign-in on a phone remains unverified. The APK is signed with the original Miruro certificate.
 
 The community service could not be accessed from the build environment, so live account login, registration and commenting still need a phone check. Physical brightness changes, slider alignment and fade behavior, actual PiP transitions, OEM permissions, Play/Pause delivery, audio interruptions, Android 16 edge-to-edge layout, Back gestures, keyboard behavior, tablet/foldable orientation locking, Android permission prompts, the save picker, video-player chooser, live custom-DNS transfers, background delivery and installation still require physical-device validation. This is not a claim that every provider or device has been tested.
 
